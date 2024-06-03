@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+
+
+
+h1{
+
+  background-color: rgb(56, 51, 51);
+  color: white;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+.upload  {
+  font-family: Arial, sans-serif;
+  border: #0b2c50 1px solid;
+  width: 450px;
+  align-self: center;
+  padding: 20px;
+ 
+}
+.products ,  .inventory , .articles ,.upload  {
+  font-family: Arial, sans-serif;
+  margin: 80px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.nested-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nested-table th, .nested-table td {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+.nested-table th {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
