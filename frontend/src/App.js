@@ -18,7 +18,6 @@ function App() {
   const [fileInfo, setFileInfo] = useState({});
 
   useEffect(() => {
-
     fetchProducts();
     fetchArticles();
     fetchInventory();
@@ -100,9 +99,9 @@ function App() {
           <button type="submit">Upload data</button>
         </form>
       </div>
+      <Inventory inventory={inventory} handleSell={handleSell} />
       <Products products={products} />
       <Articles articles={articles} />
-      <Inventory inventory={inventory} handleSell={handleSell} />
     </div>
   );
 }
