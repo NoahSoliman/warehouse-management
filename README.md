@@ -17,13 +17,13 @@ Clone this repository to your local machine:
 
     git clone <repository-url>
 
-### Step 2: Create a .env File
+### Step 2: Create a .env File (optional)
 
-Create a .env file in the backend/ directory with the following content.
+If you're using MongoDB, you can customize the MongoDB connection link by updating the .env file in the backend/ directory with your own connection URI.
 
-Update the MongoDB connection URI with your own MongoDB details:
+Alternatively, you can use the provided MongoDB connection link.
 
-Example .env file:
+Here is some example .env file:
 
     MONGODB_URI=mongodb://localhost:27017/warehouse
     
@@ -31,7 +31,10 @@ Or for MongoDB Atlas
 
     MONGODB_URI=mongodb+srv://username:password@wh-soft.c2tfoj1.mongodb.net
 
-    
+Please note that the provided MongoDB connection link may have usage limitations.
+
+Adjust it as necessary for your specific MongoDB setup.
+
 ## Build and Run
 
 You have two options to run the application: using Docker or manually installing dependencies.
