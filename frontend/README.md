@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Warehouse Management Application
+This application is designed to manage a warehouse inventory and facilitate product management.
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+• Node.js and npm installed on your local machine.
 
-## Available Scripts
+• Docker and Docker Compose installed on your local machine (optional, if you prefer to run the application using Docker).
 
-In the project directory, you can run:
+• MongoDB Atlas account or MongoDB server running locally (if you're using a MongoDB database).
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 1: Clone the Repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone this repository to your local machine:
 
-### `npm test`
+    git clone <repository-url>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 2: Create a .env File (optional)
 
-### `npm run build`
+If you're using MongoDB, you can customize the MongoDB connection link by updating the .env file in the backend/ directory with your own connection URI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Alternatively, you can use the provided MongoDB connection link.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here is some example .env file:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    MONGODB_URI=mongodb://localhost:27017/warehouse
+    
+Or for MongoDB Atlas
 
-### `npm run eject`
+    MONGODB_URI=mongodb+srv://username:password@wh-soft.c2tfoj1.mongodb.net
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Please note that the provided MongoDB connection link may have usage limitations.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Adjust it as necessary for your specific MongoDB setup.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Build and Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You have two options to run the application: using Docker or manually installing dependencies.
 
-## Learn More
+### Option 1: Using Docker Compose
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Build Docker Images for Both Backend and Frontend:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        docker-compose build
+   
+2. Start the Docker Containers:
 
-### Code Splitting
+        docker-compose up
+   
+This will start both backend and frontend containers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can access the application at http://localhost:3000.
 
-### Analyzing the Bundle Size
+### Option 2: Manually Installing Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Backend
+1.	Install Backend Dependencies:
 
-### Making a Progressive Web App
+        cd backend
+  	
+        npm install
+  	
+2.  Start the Backend Server:
+  
+        npm start
+   
+The backend server will start running on port 3001 by default.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Frontend
 
-### Advanced Configuration
+1. Install Frontend Dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+        cd frontend
 
-### Deployment
+        npm install
+        
+2. Start the Frontend Development Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+        npm start
+   
+The frontend development server will start running on port 3000 by default and open in your default web browser.
 
-### `npm run build` fails to minify
+Once both the backend and frontend servers are running, you can access the application by navigating to http://localhost:3000 in your web browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Data Files
+
+Ensure that the data files you intend to upload are named products.json for products and inventory.json for articles. These JSON files must be structured in a specific way. Look in the root directory of your project in the folder simple-data, where you will find two files suitable for the project that you can upload from within the program interface.
+
+
+## Running Unit Tests
+
+You can run some unit test cases for both the backend and frontend components of the application.
+
+### Backend
+
+To run backend unit tests, navigate to the `backend/` directory and run the following command:
+
+    cd backend
+    
+    npm test
+
+This will execute some unit test cases for the frontend codebase.
+
+### frontend
+To run frontend unit tests, navigate to the frontend/ directory and run the following command:
+
+    cd frontend
+    
+    npm test
+
+
+This will execute some unit test cases for the frontend codebase.
+
+Make sure you have installed all dependencies before running the tests.
+
+### Additional Notes
+
+•	Ensure MongoDB is running and accessible before starting the backend server.
+
+•	If you encounter any issues or have questions, feel free to contact us at Noah.soliman@outlook.com.
+
+
