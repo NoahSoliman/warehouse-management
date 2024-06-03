@@ -76,7 +76,7 @@ button[type="submit"]:hover {
 }
 .products ,  .inventory , .articles ,.upload  {
   font-family: Arial, sans-serif;
-  margin: 80px;
+  margin: 30px;
 }
 
 table {
