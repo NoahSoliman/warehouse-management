@@ -51,8 +51,9 @@ function App() {
 
   const handleFileUpload = (e) => {
     e.preventDefault();
+    console.log(e.target[0].value);
 
-    if (fileInfo.file) {
+    if (fileInfo && fileInfo.file) {
       const formData = new FormData();
       formData.append("file", fileInfo.file);
 
@@ -63,13 +64,17 @@ function App() {
           fetchProducts();
           fetchArticles();
           fetchInventory();
+          e.target[0].value = null;
         })
         .catch((error) => {
           alert(
             `Error loading ${fileInfo.whatData} :  something wrong with the file `
           );
+          e.target[0].value = null;
         });
-    } else alert("Please select a file");
+    } else {
+      alert("Please select a file");
+    }
   };
 
   const handleFileChange = (e) => {
